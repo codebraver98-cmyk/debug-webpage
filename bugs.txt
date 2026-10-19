@@ -1,0 +1,12 @@
+in css:
+    there was a missing dash in the background-color
+in html:
+    added an id to the button
+in java script:   
+    fixed a wrong id name ti nameInput
+    fixed a wrong id name to box
+    fixed a whole command in the position of the box
+    fixed a command in the style.left 
+    removed 2 equals out of 3 
+    added  a delay duration of 100 for the function inside the interval 
+    removed a semi-colon on line nb 38   

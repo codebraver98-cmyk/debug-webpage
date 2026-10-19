@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Buggy Example</title>
+   <style>
+    body{
+        background-color: lightblue; /*changes the background color of the whole body*/
+    }
+    #box{
+        width: 100px;/*addresses the width of the box*/
+        height: 100px;/*addresses the height of the box*/
+        background: red;/*addresses the background color of the box*/
+    }
+   </style>
+</head>
+<body>
+    <h1>Bug Practice</h1> <!--an h1 tag containing text-->
+    <input id="nameInput" type="text"><!--receives an input from the user-->
+    <button onclick="start()" id="btn">Start</button><!--a button that does the assigned function when pressed-->
+    <div id="box"></div><!--it's a container that's invisible unless u add styles-->
+    <script>
+        let counter=0;//starts the couter from 0
+        function start(){
+            let input = document.getElementById("nameInput");//get's the input by it's id
+            console.log(input.value);   //prints the value of the input in the 
+        
+           interval=setInterval(function(){
+            counter++;// counter gradually increasing by 1
+            document.getElementById('btn').style.backgroundColor="yellow";//changes the background color of the button
+            document.getElementById("box").style.position='relative';//changes the positionof the box so that when we change the left measurment it changes
+            document.getElementById('box').style.left=counter + "px"; //changes the left position of the box as the counter's value in px
+            if(counter>=10){//when the counter reaches 10px do the following
+               clearInterval(interval)//repeat from the begining
+               counter=0;//let the counter go back to zero
+            }
+            
+            
+        },100) //hundred is the duration it takes is ms 
+    }
+    </script>
+</body>
+</html>
